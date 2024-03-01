@@ -1,0 +1,22 @@
+Instalar Expo
+npm instal -g expo-cli
+
+**********
+Crear  proyecto
+npx create-expo-app my-app
+
+cd.../
+
+**********
+Instalar dependencias
+npx expo install react-dom react-native-web @expo/metro-runtime
+
+**********
+Iniciar Proyecto
+npx expo start
+
+
+******
+Linter / Configurar json tambien
+
+npm install --save-dev babel-eslint eslint-config-standard eslint-config-standard-jsx eslint-config-standard-react eslint-plugin-promise eslint-plugin-import eslint-plugin-node eslint-plugin-react
