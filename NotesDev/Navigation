@@ -1,0 +1,22 @@
+Instalar paquete de navegacion
+npm install @react-navigation/native
+
+
+Si se maneja con Expo agregar extra los siguientes
+
+expo install react-native-screens react-native-safe-area-context
+
+
+
+**********************************************************
+Bottom Tabs Navigator
+npm install @react-navigation/bottom-tabs
+
+Native Stack Navigator
+npm install @react-navigation/native-stack
+
+
+***********************************************************
+Ultima dependecia de Expo para manejo y reconocimiento de táclos y gestos
+
+expo install react-native-gesture-handler
