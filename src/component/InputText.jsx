@@ -13,7 +13,6 @@ export default function InputText() {
     );
   }
  
-
 const styles = StyleSheet.create({ 
     inputText: {     
       textAlign: "center",
@@ -24,4 +23,3 @@ const styles = StyleSheet.create({
       fontWeight: "bold",
     },
   });
-  
