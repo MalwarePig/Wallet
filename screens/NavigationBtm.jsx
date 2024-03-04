@@ -1,5 +1,8 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+ 
+import { useNavigation } from '@react-navigation/native';
 import { NavigationContainer } from '@react-navigation/native'
 import { AntDesign } from '@expo/vector-icons';
 import { FontAwesome6 } from '@expo/vector-icons';
@@ -9,8 +12,21 @@ import Home from './Home';
 import Transactions from './Transactions';
 import Debt from './Debt';
 import Settings from './Settings';
+import DebtStacksScreen from './DebtStacksScreen';
 
 const Tab = createBottomTabNavigator();
+const DebtStackNavigator = createNativeStackNavigator();
+
+/** STACKS */
+
+function MyStacks() {
+    return (
+        <DebtStackNavigator.Navigator initialRouteName='DebtMenuStack'>
+            <DebtStackNavigator.Screen name="DebtMenuStack" component={Debt} options={{headerShown:false}}/>
+            <DebtStackNavigator.Screen name="DebtStacksScreen" component={DebtStacksScreen} options={{ headerBackTitleVisible: false,title:"Back" }} />
+        </DebtStackNavigator.Navigator>
+    )  
+}
 
 function MyTab() {
     return(
@@ -34,7 +50,7 @@ function MyTab() {
                     )
                 }}
             />
-            <Tab.Screen name="Debt" component={Debt} 
+            <Tab.Screen name="Debt" component={MyStacks} 
                 options={{
                     tabBarLabel: 'Debt',/*Texto del label tab*/
                     headerShown: false,/*Para ocultar el header */
@@ -63,6 +79,7 @@ export default function NavigationBtm(){
         </NavigationContainer>
     );
 }
+
 
 
 

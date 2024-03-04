@@ -8,7 +8,7 @@ export default function InputText() {
             editable
             numberOfLines={4}
             maxLength={40}
-            style={styles.inputText}
+            style={styles.inputText} 
           /> 
     );
   }
